@@ -1,1 +1,2 @@
-# SeismosUz
+# seismosuz
+websiteTemplateFrontend

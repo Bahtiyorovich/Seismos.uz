@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<h tml lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+        <title>Swiper demo</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+
+        <!-- Link Swiper's CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/main.css" />
+        <!-- Demo styles -->
+        <style>
+            html,
+            body {
+                position: relative;
+                height: 100%;
+            }
+            
+            body {
+                background: #eee;
+                font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+                font-size: 14px;
+                color: #000;
+                margin: 0;
+                padding: 0;
+            }
+            
+            .swiper-container {
+                width: 100%;
+                height: 100%;
+            }
+            
+            .swiper-slide {
+                text-align: center;
+                font-size: 18px;
+                background: #fff;
+                /* Center slide text vertically */
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                -webkit-justify-content: center;
+                justify-content: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                -webkit-align-items: center;
+                align-items: center;
+            }
+        </style>
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+    </head>
+
+    <body>
+        <!-- Swiper -->
+        <div class="cy mt-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide imghe rounded" style="background-image: url('images/UCSD-library.jpg')">
+                                    <div class="wrap_txt_i">
+                                        <p class="text-light"><a class="text-light" href="#"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit nostrum cupiditate </a></p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide imghe rounded" style="
+                      background-image: url('images/innavatsion_strategiya.png');
+                    ">
+                                    <div class="wrap_txt_i">
+                                        <p class="text-light"><a class="text-light" href="#"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit nostrum
+                            cupiditate </a></p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide imghe rounded" style="background-image: url('images/Uzb_tkanali.png')">
+                                    <div class="wrap_txt_i">
+                                        <p class="text-light"><a class="text-light" href="#"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit nostrum
+                                            cupiditate </a></p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide imghe rounded" style="background-image: url('images/prezidentRasmi.jpg')">
+                                    <div class="wrap_txt_i">
+                                        <p class="text-muted"><a href="#" class="text-light"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit nostrum
+                                            cupiditate </a></p>
+                                    </div>
+                                </div>
+                                <!-- <div class="swiper-slide">Slide 5</div>
+                            <div class="swiper-slide">Slide 6</div>
+                            <div class="swiper-slide">Slide 7</div>
+                            <div class="swiper-slide">Slide 8</div>
+                              <div class="swiper-slide">Slide 9</div>
+                              <div class="swiper-slide">Slide 10</div> -->
+
+                            </div>
+
+                            <!-- Add Pagination -->
+                            <div class="swiper-pagination text-center"></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Swiper JS -->
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <!-- Initialize Swiper -->
+        <script>
+            var swiper = new Swiper(".swiper-container", {
+                slidesPerView: 1,
+                spaceBetween: 10,
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
+
+                // init: false,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+
+
+                },
+
+                breakpoints: {
+                    640: {
+                        slidesPerView: 2,
+                        spaceBetween: 20,
+                    },
+                    768: {
+                        slidesPerView: 2,
+                        spaceBetween: 5,
+                    },
+                    1024: {
+                        slidesPerView: 2,
+                        spaceBetween: 5,
+
+                    },
+                },
+            });
+
+
+
+
+            // xasxas
+            var modal = document.getElementById("myModal");
+
+            // Get the image and insert it inside the modal - use its "alt" text as a caption
+            var img = document.getElementById("myImg");
+            var modalImg = document.getElementById("img01");
+            var captionText = document.getElementById("caption");
+            img.onclick = function() {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+            }
+
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+        </script>
+    </body>
+
+    </html>
